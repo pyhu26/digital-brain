@@ -6,7 +6,7 @@ import {useRouter} from 'next/router'
 function BackLinks({linkList}) {
 
     return (<div className="note-footer">
-            <h3 className="backlink-heading">Link to this note</h3>
+            <span className="backlink-heading">이 문서를 참조하는 문서</span>
         {(linkList != null && linkList.length > 0)
             ?
             <>
@@ -41,11 +41,6 @@ function MDContent({content, backLinks, handleOpenNewContent}) {
     return (
 
         <div className="markdown-rendered">
-            <Alert severity="info">
-                <AlertTitle>Want to know more?</AlertTitle>
-                🌱 <strong>Follow</strong> or <strong>DM</strong> me on Twitter at <span><a
-                href="https://twitter.com/tuancm">@tuancm</a></span>
-            </Alert>
             <div dangerouslySetInnerHTML={{__html: content}}/>
             {/*<button onClick={handleInternalLinkClick}>Click me</button>*/}
             {/*<hr/>*/}

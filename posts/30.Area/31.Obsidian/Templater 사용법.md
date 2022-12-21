@@ -1,2 +1,0 @@
-- Templater Plugin 설치
-- Template 선택
